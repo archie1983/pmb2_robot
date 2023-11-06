@@ -76,8 +76,10 @@
 
     <joint name="${name}_footprint_joint" type="fixed">
       <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0" />
-      <child link="${name}_link" />
-      <parent link="${name}_footprint"/>
+      <!--child link="${name}_link" />
+      <parent link="${name}_footprint"/--> <!-- AE: 06 Nov 2023 -->
+      <child link="${name}_footprint" />
+      <parent link="${name}_link"/>
     </joint>
 
   <!-- gazebo parameters are given here for base_link thru base_footprint -->
